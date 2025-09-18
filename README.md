@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Arb & Edge Tool (Frontend-only)
 
-## Getting Started
+Single-page app to compare sportsbook odds vs prediction-market probabilities to find arbitrage and value edges. Built with Next.js App Router, TypeScript, Tailwind, shadcn/ui, Zod. All math runs in the browser.
 
-First, run the development server:
+## Tech
+- Next.js 15 (App Router) + TypeScript
+- TailwindCSS v4 + shadcn/ui
+- Zod (validation)
+- Playwright (smoke test)
+- pnpm
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Scripts
+- `pnpm dev` - start dev server
+- `pnpm build` - production build
+- `pnpm start` - start production server
+- `pnpm test:e2e` - run Playwright tests
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Math Summary
+- Decimal → p: p = 1/O
+- American → p: A>0: 100/(A+100), A<0: -A/(-A+100)
+- Fractional a/b → decimal: 1 + a/b
+- p → decimal: 1/p
+- Overround: R = Σ p_i. Fair probs: fp_i = p_i / R. Fair odds: 1/fp_i
+- Effective decimal mapping: apply fees/slippage: O' = O × (1 - fee) × (1 - slippage)
+- Arbitrage: if Σ(1/O_i) < 1 → arb. Stake split s_i = S*(1/O_i)/Σ(1/O_j). Guaranteed profit = min_i(s_i*O_i - S)
+- Value edge: edge = p_pm - p_book. Kelly: b=O-1, f=(b*p-(1-p))/b, clamp to [0,1]. ½-Kelly = f/2.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Notes
+- No backend. State persists in localStorage (settings and last session).
+- CSV export of results.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Dev
+1. `pnpm i`
+2. `pnpm dev`
+3. Visit http://localhost:3000
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Test
+1. `pnpm dev` (in one terminal)
+2. `pnpm test:e2e` (in another terminal)

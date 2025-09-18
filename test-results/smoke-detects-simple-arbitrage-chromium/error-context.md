@@ -1,0 +1,113 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "Arb & Edge Tool" [level=1] [ref=e5]
+      - paragraph [ref=e6]: Compare books vs prediction markets
+    - generic [ref=e7]:
+      - generic [ref=e9]: Quick Converter
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - textbox "Value" [ref=e12]: "2.0"
+          - combobox [ref=e13]:
+            - generic: Decimal
+            - img
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - generic [ref=e16]: "Decimal:"
+            - text: "2"
+          - generic [ref=e17]:
+            - generic [ref=e18]: "Prob:"
+            - text: "0.5"
+          - generic [ref=e19]:
+            - generic [ref=e20]: "American:"
+            - text: "100"
+          - generic [ref=e21]:
+            - generic [ref=e22]: "Fractional:"
+            - text: 1/1
+        - generic [ref=e23]:
+          - button "Remove vig (N-way)…" [disabled]
+    - generic [ref=e24]:
+      - generic [ref=e26]: Arbitrage / Edge Calculator
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - tablist [ref=e29]:
+            - tab "Book vs Book" [selected] [ref=e30]
+            - tab "Book vs PM" [ref=e31]
+            - tab "Book vs PM (NO unavailable)" [ref=e32]
+          - tabpanel [ref=e33]:
+            - generic [ref=e34]:
+              - generic [ref=e35]:
+                - generic [ref=e36]: Label
+                - generic [ref=e37]: Venue
+                - generic [ref=e38]: Input
+                - generic [ref=e39]: Value
+                - generic [ref=e40]: Fee %
+                - generic [ref=e41]: Slippage %
+                - generic [ref=e42]: Limit
+              - generic [ref=e43]:
+                - textbox "Outcome" [ref=e44]
+                - combobox [ref=e45]:
+                  - generic: Sportsbook
+                  - img
+                - combobox [ref=e46]:
+                  - generic: Decimal
+                  - img
+                - textbox "Value" [ref=e47]: "2.1"
+                - spinbutton [ref=e48]: "0"
+                - spinbutton [ref=e49]: "0"
+                - spinbutton [ref=e50]
+                - button "Remove" [ref=e51]
+              - generic [ref=e52]:
+                - textbox "Outcome" [ref=e53]
+                - combobox [ref=e54]:
+                  - generic: Sportsbook
+                  - img
+                - combobox [ref=e55]:
+                  - generic: Decimal
+                  - img
+                - textbox "Value" [ref=e56]: "2.1"
+                - spinbutton [ref=e57]: "0"
+                - spinbutton [ref=e58]: "0"
+                - spinbutton [ref=e59]
+                - button "Remove" [ref=e60]
+              - generic [ref=e61]:
+                - button "Add outcome" [ref=e62]
+                - button "Remove last" [disabled]
+        - generic [ref=e63]:
+          - generic [ref=e64]: Total stake
+          - spinbutton [ref=e65]: "100"
+          - button "Check opportunities" [active] [ref=e66]
+    - generic [ref=e67]:
+      - generic [ref=e69]: Results
+      - generic [ref=e72]: No Edge
+    - generic [ref=e73]:
+      - generic [ref=e75]: Settings & Assumptions
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]: Default Format
+            - combobox [ref=e80]:
+              - generic: Decimal
+              - img
+          - generic [ref=e81]:
+            - generic [ref=e82]: Fee %
+            - spinbutton [ref=e83]: "0"
+          - generic [ref=e84]:
+            - generic [ref=e85]: Slippage %
+            - spinbutton [ref=e86]: "0"
+          - generic [ref=e87]:
+            - generic [ref=e88]: Currency
+            - textbox [ref=e89]: $
+        - generic [ref=e90]:
+          - generic [ref=e91]: Dark mode
+          - combobox [ref=e92]:
+            - generic: System
+            - img
+          - button "Reset session" [ref=e93]
+  - button "Open Next.js Dev Tools" [ref=e99] [cursor=pointer]:
+    - img [ref=e100] [cursor=pointer]
+  - alert [ref=e103]
+```
