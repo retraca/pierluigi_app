@@ -1,0 +1,16 @@
+{
+	"app.title": "Sports Odds & Markets Workbench",
+	"nav.odds": "Odds",
+	"nav.arb": "Arbitrage",
+	"nav.pm": "Prediction Markets",
+	"nav.batch": "Batch",
+	"nav.learn": "Learn",
+	"nav.about": "About",
+	"action.normalize": "Normalize & De‑vig",
+	"action.find_optimize": "Find & Optimize",
+	"settings": "Settings",
+	"odds.format": "Odds format",
+	"currency": "Currency",
+	"theme": "Theme",
+	"language": "Language"
+} 

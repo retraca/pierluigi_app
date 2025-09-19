@@ -1,0 +1,4 @@
+market_id,venue,outcome,odds_format,odds_value,max_stake,fee_bps,is_prediction_market,pm_price
+m2,Book A,Home,decimal,2.6,1000,0,false,
+m2,Book B,Draw,decimal,3.4,1000,0,false,
+m2,Book C,Away,decimal,3.2,1000,0,false, 

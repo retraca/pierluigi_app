@@ -1,0 +1,4 @@
+market_id,venue,outcome,odds_format,odds_value,max_stake,fee_bps,is_prediction_market,pm_price
+m3,Book A,YES,decimal,1.9,1000,0,false,
+m3,PM,YES,decimal,0,0,50,true,0.55
+m3,Book B,NO,decimal,2.05,1000,0,false, 
